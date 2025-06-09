@@ -13,6 +13,7 @@ def PPII(dihedral_psi, dihedral_phi):
 read_file = dihedral_file.readlines()
 stable_time = []
 
+#Write out the time point (in picoseconds) in the trajectory where every residue is within the PPII dihedral angle range
 for i in range(0,len(read_file),16):
     current_phi = []
     current_psi = []
@@ -22,7 +23,6 @@ for i in range(0,len(read_file),16):
       current_psi.extend([(float(psi))])
 
     if(PPII(current_psi,current_phi)): 
-        #stable_time.extend([i/16+100000]) 
         f = open("PPII_time.out","a")
         f.write(f"{i/16+100000}\n")
     
