@@ -1,12 +1,12 @@
-#This file generates a Ramachandran free energy surface given a file containing a list of dihedral angles sampled in an MD simulation
+#This script generates a Ramachandran free energy surface given a file containing a list of dihedral angles sampled in an MD simulation
+#Input: file containing list of dihedral angles sampled in MD subjectory 
+
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 
-
-
-filename = sys.argv[1] #enter file containing list of dihedral angles sampled in MD trajectory 
+filename = sys.argv[1] #enter file containing list of dihedral angles sampled in MD trajectory. Example input file can be found in ../datasets/2repeats_peptide_noglycan/rama_t100to200ns_300K.dat 
 
 #Relevant Physical Constants and Parameters 
 T = 300 #Temperature in Kelvin
