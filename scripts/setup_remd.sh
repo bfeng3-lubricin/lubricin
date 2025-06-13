@@ -1,4 +1,5 @@
 #!/bin/bash
+#This script sets up each replica directory. 
 
 i=1
 module load gromacs/2018.2
