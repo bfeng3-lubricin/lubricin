@@ -31,7 +31,8 @@ for res_num in range(len(dihedral_labels)):
        glycopeptide[res_num][i] = glycopeptide_read_file[i]
 
 
-def structure_population(dihedrals,phi1,phi2,psi1,psi2): #dihedrals = array of dihedral angles (in string format separated by space); ranges of phi and psi angles for a specified type of structure
+#dihedrals = array of dihedral angles (in string format separated by space); ranges of phi and psi angles for a specified type of structure
+def structure_population(dihedrals,phi1,phi2,psi1,psi2): 
    count = []
    for i in range(len(dihedrals)):
       phi, psi = dihedrals[i].split()
@@ -80,7 +81,7 @@ beta_stde = np.array(beta_stde)
 r_alpha_population = np.array(r_alpha_population)
 r_alpha_stde = np.array(r_alpha_stde)
 
-
+#Plot Secondary Structure Populations 
 fig, axs = plt.subplots(nrows=3,ncols=1,sharex=True) 
 axs = axs.flatten()
 
